@@ -9,7 +9,7 @@ import Foundation
 
 class HomeScreenViewModel {
     
-    private var uiModel: [HomeDataTableCellModel] = []
+    var uiModel: [HomeDataTableCellModel] = []
     
     var view: HomeScreenViewProtocol!
     var router: HomeScreenRouter!
@@ -37,8 +37,6 @@ class HomeScreenViewModel {
     func didSelectData(at index: IndexPath) {
         let data = model.dataHome[index.row]
         router.navigateToDetail(data)
-        
-        
     }
     
     func numberOfItems() -> Int {

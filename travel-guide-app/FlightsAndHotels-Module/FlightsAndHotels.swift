@@ -55,7 +55,7 @@ class FlightsAndHotels: UIViewController, HomeScreenViewProtocol {
         
         
         
-        flihotlabel.text = "parametre"
+        flihotlabel.text = "Flights & Hotels"
         flihotlabel.font = UIFont.boldSystemFont(ofSize: view.bounds.width * 0.1)
         flihotlabel.translatesAutoresizingMaskIntoConstraints = false
         

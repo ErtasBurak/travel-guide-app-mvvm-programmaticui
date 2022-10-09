@@ -15,6 +15,7 @@
 		F13603EF28E4989200F7C1B3 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13603EE28E4989200F7C1B3 /* HomeScreen.swift */; };
 		F13603F128E498A500F7C1B3 /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13603F028E498A500F7C1B3 /* SearchScreen.swift */; };
 		F13603F328E498B600F7C1B3 /* BookMarksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13603F228E498B600F7C1B3 /* BookMarksScreen.swift */; };
+		F14F33D128F19040001E009D /* SearchScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14F33D028F19040001E009D /* SearchScreenBuilder.swift */; };
 		F1980CC428E646F800FB1CD8 /* HomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1980CC328E646F800FB1CD8 /* HomeScreenCell.swift */; };
 		F1980CE828E83A3400FB1CD8 /* FlightsAndHotels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1980CE728E83A3400FB1CD8 /* FlightsAndHotels.swift */; };
 		F1980CEA28E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1980CE928E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift */; };
@@ -38,6 +39,7 @@
 		F13603EE28E4989200F7C1B3 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		F13603F028E498A500F7C1B3 /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		F13603F228E498B600F7C1B3 /* BookMarksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarksScreen.swift; sourceTree = "<group>"; };
+		F14F33D028F19040001E009D /* SearchScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenBuilder.swift; sourceTree = "<group>"; };
 		F1980CC328E646F800FB1CD8 /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCell.swift; sourceTree = "<group>"; };
 		F1980CE728E83A3400FB1CD8 /* FlightsAndHotels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsAndHotels.swift; sourceTree = "<group>"; };
 		F1980CE928E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsAndHotelsCell.swift; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		F11A1C7828F11424000C2448 /* HomeScreen-Module */ = {
 			isa = PBXGroup;
 			children = (
+				F1A107E428ED8BCD005E744E /* HomeScreenBuilder.swift */,
+				F1A107E028ED7804005E744E /* HomeScreenRouter.swift */,
 				F11A1C7B28F1143E000C2448 /* View */,
 				F11A1C7A28F11438000C2448 /* Model */,
 				F11A1C7928F11430000C2448 /* ViewModel */,
@@ -97,6 +101,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F130A8B928F327430075332A /* SearchScreen-Module */ = {
+			isa = PBXGroup;
+			children = (
+				F13603F028E498A500F7C1B3 /* SearchScreen.swift */,
+				F14F33D028F19040001E009D /* SearchScreenBuilder.swift */,
+			);
+			path = "SearchScreen-Module";
+			sourceTree = "<group>";
+		};
+		F130A8BA28F327FB0075332A /* FlightsAndHotels-Module */ = {
+			isa = PBXGroup;
+			children = (
+				F1980CE728E83A3400FB1CD8 /* FlightsAndHotels.swift */,
+				F1980CE928E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift */,
+				F1A107E628EDA14F005E744E /* FlightsAndHotelsBuilder.swift */,
+			);
+			path = "FlightsAndHotels-Module";
+			sourceTree = "<group>";
+		};
 		F13603CB28E4969600F7C1B3 = {
 			isa = PBXGroup;
 			children = (
@@ -122,14 +145,10 @@
 				F13603E828E4969700F7C1B3 /* Info.plist */,
 				F13603E028E4969600F7C1B3 /* travel_guide_app.xcdatamodeld */,
 				F13603DB28E4969600F7C1B3 /* TabBar.swift */,
-				F1A107E028ED7804005E744E /* HomeScreenRouter.swift */,
-				F1A107E428ED8BCD005E744E /* HomeScreenBuilder.swift */,
-				F13603F028E498A500F7C1B3 /* SearchScreen.swift */,
 				F13603F228E498B600F7C1B3 /* BookMarksScreen.swift */,
-				F1980CE728E83A3400FB1CD8 /* FlightsAndHotels.swift */,
-				F1980CE928E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift */,
-				F1A107E628EDA14F005E744E /* FlightsAndHotelsBuilder.swift */,
 				F1980D5128EC693000FB1CD8 /* DetailScreen.swift */,
+				F130A8BA28F327FB0075332A /* FlightsAndHotels-Module */,
+				F130A8B928F327430075332A /* SearchScreen-Module */,
 				F11A1C7828F11424000C2448 /* HomeScreen-Module */,
 			);
 			path = "travel-guide-app";
@@ -217,6 +236,7 @@
 				F1A107E128ED7804005E744E /* HomeScreenRouter.swift in Sources */,
 				F13603E228E4969600F7C1B3 /* travel_guide_app.xcdatamodeld in Sources */,
 				F13603DC28E4969600F7C1B3 /* TabBar.swift in Sources */,
+				F14F33D128F19040001E009D /* SearchScreenBuilder.swift in Sources */,
 				F1980CE828E83A3400FB1CD8 /* FlightsAndHotels.swift in Sources */,
 				F13603D828E4969600F7C1B3 /* AppDelegate.swift in Sources */,
 				F1980CC428E646F800FB1CD8 /* HomeScreenCell.swift in Sources */,

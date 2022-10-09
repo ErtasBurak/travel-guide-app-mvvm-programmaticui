@@ -41,7 +41,7 @@ class TabBar: UITabBarController, UITabBarControllerDelegate  {
         tabOne.tabBarItem = tabOneBarItem
         
         // Create Tab two
-        let tabTwo = SearchScreen()
+        let tabTwo = SearchScreenBuilder.createSearchScreen()
         let tabTwoBarItem2 = UITabBarItem(title: nil, image: searchIcon, selectedImage: selectedSearch)
         tabTwo.tabBarItem = tabTwoBarItem2
         

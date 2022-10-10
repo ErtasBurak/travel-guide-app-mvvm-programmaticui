@@ -7,21 +7,11 @@
 
 import UIKit
 
-protocol HomeScreenViewProtocol {
-    
-    func updateUI()
-    func showLoading()
-    func hideLoading()
-    func showError(with message: String?)
-}
-
-class HomeScreen: UIViewController, HomeScreenViewProtocol {
-    
-    
+class HomeScreen: UIViewController, BaseProtocol {
     
     var collectionView: UICollectionView!
     
-    var viewModel: HomeScreenViewModel?
+    var viewModel: BaseViewModel?
 
     let uiView = UIView()
     
@@ -88,7 +78,7 @@ class HomeScreen: UIViewController, HomeScreenViewProtocol {
     }
     
     func showError(with message: String?) {
-        
+        print("error")
     }
     
     
@@ -120,10 +110,6 @@ class HomeScreen: UIViewController, HomeScreenViewProtocol {
 private extension HomeScreen {
     
     private func setupUI() {
-        
-        
-
-        
         
         let layout = UICollectionViewFlowLayout()
 
@@ -218,9 +204,7 @@ extension HomeScreen: UICollectionViewDelegate, UICollectionViewDataSource{
         cell.layer.cornerRadius = 20
         
         cell.configureUI(with: viewModel?.getItem(for: indexPath))
-        
-        
-        
+    
         return cell
     }
 
@@ -232,23 +216,20 @@ extension HomeScreen: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
-        
         viewModel?.didSelectData(at: indexPath)
+        
     }
 }
 
 private extension HomeScreenCell {
 
-    func configureUI(with model: HomeDataTableCellModel?) {
+    func configureUI(with model: BaseDataTableCell?) {
         name.text = model?.title
         category.text = model?.category
         
         let url:URL? = URL(string: model!.imageUrl)
         let data:Data? = try! Data(contentsOf : url!)
         image.image = UIImage(data : data!)
-        
-        
-        
+    
     }
 }

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class FlightsAndHotels: UIViewController, HomeScreenViewProtocol {
+class FlightsAndHotels: UIViewController, BaseProtocol {
     
-    var viewModel: HomeScreenViewModel?
+    var viewModel: BaseViewModel?
     
     let flihotlabel = UILabel()
     
@@ -21,9 +21,6 @@ class FlightsAndHotels: UIViewController, HomeScreenViewProtocol {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBackground
-        
-        
-        
         
         setupUI()
         viewModel?.didViewLoad()
@@ -46,14 +43,11 @@ class FlightsAndHotels: UIViewController, HomeScreenViewProtocol {
     }
     
     func showError(with message: String?) {
-        
+        print("error")
     }
     
     func setupUI(){
         view.addSubview(flihotlabel)
-        
-        
-        
         
         flihotlabel.text = "Flights & Hotels"
         flihotlabel.font = UIFont.boldSystemFont(ofSize: view.bounds.width * 0.1)
@@ -62,14 +56,17 @@ class FlightsAndHotels: UIViewController, HomeScreenViewProtocol {
         flihotlabel.topAnchor.constraint(equalTo: view.topAnchor, constant: view.bounds.height * 0.1).isActive = true
         flihotlabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: view.bounds.width * 0.1).isActive = true
         
-        let fancyImage = UIImage(systemName: "arrow.backward.to.line.circle")
+        //navigationbar backbutton configuration
+        let fancyImage = UIImage(named: "arrowback")
         let fancyAppearance = UINavigationBarAppearance()
         fancyAppearance.configureWithTransparentBackground()
         fancyAppearance.setBackIndicatorImage(fancyImage, transitionMaskImage: fancyImage)
+        
         let backButtonAppearence = UIBarButtonItemAppearance()
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.clear]
         backButtonAppearence.normal.titleTextAttributes = titleTextAttributes
         backButtonAppearence.highlighted.titleTextAttributes = titleTextAttributes
+        
         fancyAppearance.backButtonAppearance = backButtonAppearence
 
         navigationController?.navigationBar.standardAppearance = fancyAppearance
@@ -80,7 +77,7 @@ class FlightsAndHotels: UIViewController, HomeScreenViewProtocol {
         
         tableView = UITableView(frame: CGRect.zero)
         tableView.separatorColor = .systemBackground
-        tableView.register(FlightsAndHotelsCell.self, forCellReuseIdentifier: "flightsandhotelscell")
+        tableView.register(BaseTableViewCell.self, forCellReuseIdentifier: "BaseTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
         view.addSubview(tableView)
@@ -103,7 +100,7 @@ extension FlightsAndHotels: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "flightsandhotelscell",for: indexPath) as! FlightsAndHotelsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BaseTableViewCell",for: indexPath) as! BaseTableViewCell
         cell.configureUI(with: viewModel?.getItem(for: indexPath))
         cell.selectionStyle = .none
         return cell
@@ -121,9 +118,9 @@ extension FlightsAndHotels: UITableViewDelegate,UITableViewDataSource{
     
 }
 
-private extension FlightsAndHotelsCell {
+private extension BaseTableViewCell {
     
-    func configureUI(with model: HomeDataTableCellModel?) {
+    func configureUI(with model: BaseDataTableCell?) {
         name.text = model?.title
         desc.text = model?.description
         

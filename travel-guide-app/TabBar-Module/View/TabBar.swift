@@ -27,9 +27,7 @@ class TabBar: UITabBarController, UITabBarControllerDelegate  {
         self.delegate = self
         
         setupTabBars()
-        
-        
-
+  
     }
     
     

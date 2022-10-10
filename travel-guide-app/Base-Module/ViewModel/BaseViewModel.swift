@@ -7,13 +7,13 @@
 
 import Foundation
 
-class HomeScreenViewModel {
+class BaseViewModel {
     
-    var uiModel: [HomeDataTableCellModel] = []
+    var uiModel: [BaseDataTableCell] = []
     
-    var view: HomeScreenViewProtocol!
-    var router: HomeScreenRouter!
-    var model: HomeScreenModel!
+    var view: BaseProtocol!
+    var router: BaseRouter!
+    var model: BaseModel!
     
     
     func didViewLoad() {
@@ -43,11 +43,11 @@ class HomeScreenViewModel {
         return uiModel.count
     }
     
-    func getItem(for indexPath: IndexPath) -> HomeDataTableCellModel {
+    func getItem(for indexPath: IndexPath) -> BaseDataTableCell {
         return uiModel[indexPath.row]
     }
     
-    private func makeUIModel(_ data: HomeData) -> HomeDataTableCellModel {
+    private func makeUIModel(_ data: BaseData) -> BaseDataTableCell {
         .init(imageUrl: data.images![0].url! , title: data.title ?? "", category: data.category ?? "", description: data.homeDataDescription ?? "")
     }
 }

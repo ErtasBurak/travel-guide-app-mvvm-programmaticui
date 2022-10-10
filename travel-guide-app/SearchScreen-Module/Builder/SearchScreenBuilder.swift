@@ -12,9 +12,9 @@ struct SearchScreenBuilder {
     static func createSearchScreen() -> UIViewController {
         
         let vc = SearchScreen()
-        let viewModel = HomeScreenViewModel()
-        let model = HomeScreenModel()
-        let router = HomeScreenRouter()
+        let viewModel = BaseViewModel()
+        let model = BaseModel()
+        let router = BaseRouter()
         
         router.viewController = vc
         viewModel.view = vc

@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SearchScreen: UIViewController, HomeScreenViewProtocol {
+class SearchScreen: UIViewController, BaseProtocol {
 
-    var viewModel: HomeScreenViewModel?
+    var viewModel: BaseViewModel?
     
     let searchLabel = UILabel()
     
@@ -21,7 +21,7 @@ class SearchScreen: UIViewController, HomeScreenViewProtocol {
     
     var indexPath: IndexPath?
     
-    var filteredData: [HomeDataTableCellModel] = []
+    var filteredData: [BaseDataTableCell] = []
     
     var searching: Bool = false
     
@@ -58,7 +58,7 @@ class SearchScreen: UIViewController, HomeScreenViewProtocol {
     }
     
     func showError(with message: String?) {
-        
+        print("error")
     }
     
     func setupUI(){
@@ -80,7 +80,7 @@ class SearchScreen: UIViewController, HomeScreenViewProtocol {
         
         searchTableView = UITableView(frame: CGRect.zero)
         searchTableView.separatorColor = .systemBackground
-        searchTableView.register(FlightsAndHotelsCell.self, forCellReuseIdentifier: "flightsandhotelscell")
+        searchTableView.register(BaseTableViewCell.self, forCellReuseIdentifier: "BaseTableViewCell")
         searchTableView.delegate = self
         searchTableView.dataSource = self
         view.addSubview(searchTableView)
@@ -107,7 +107,7 @@ extension SearchScreen: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "flightsandhotelscell",for: indexPath) as! FlightsAndHotelsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BaseTableViewCell",for: indexPath) as! BaseTableViewCell
         
         if searching == true {
             cell.name.text = filteredData[indexPath.row].title
@@ -157,9 +157,9 @@ extension SearchScreen: UITableViewDelegate,UITableViewDataSource{
     
 }
 
-private extension FlightsAndHotelsCell {
+private extension BaseTableViewCell {
     
-    func configureUI(with model: HomeDataTableCellModel?) {
+    func configureUI(with model: BaseDataTableCell?) {
         name.text = model?.title
         desc.text = model?.description
         

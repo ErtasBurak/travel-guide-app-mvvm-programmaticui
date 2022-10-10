@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F130A91D28F496710075332A /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130A91C28F496710075332A /* BaseProtocol.swift */; };
 		F13603D828E4969600F7C1B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13603D728E4969600F7C1B3 /* AppDelegate.swift */; };
 		F13603DC28E4969600F7C1B3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13603DB28E4969600F7C1B3 /* TabBar.swift */; };
 		F13603E228E4969600F7C1B3 /* travel_guide_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F13603E028E4969600F7C1B3 /* travel_guide_app.xcdatamodeld */; };
@@ -18,17 +19,18 @@
 		F14F33D128F19040001E009D /* SearchScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14F33D028F19040001E009D /* SearchScreenBuilder.swift */; };
 		F1980CC428E646F800FB1CD8 /* HomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1980CC328E646F800FB1CD8 /* HomeScreenCell.swift */; };
 		F1980CE828E83A3400FB1CD8 /* FlightsAndHotels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1980CE728E83A3400FB1CD8 /* FlightsAndHotels.swift */; };
-		F1980CEA28E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1980CE928E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift */; };
+		F1980CEA28E8D0A700FB1CD8 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1980CE928E8D0A700FB1CD8 /* BaseTableViewCell.swift */; };
 		F1980D5228EC693000FB1CD8 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1980D5128EC693000FB1CD8 /* DetailScreen.swift */; };
-		F1A107DD28ED774E005E744E /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107DC28ED774D005E744E /* HomeScreenViewModel.swift */; };
-		F1A107DF28ED776F005E744E /* HomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107DE28ED776F005E744E /* HomeScreenModel.swift */; };
-		F1A107E128ED7804005E744E /* HomeScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107E028ED7804005E744E /* HomeScreenRouter.swift */; };
-		F1A107E328ED7E6C005E744E /* HomeScreenEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107E228ED7E6C005E744E /* HomeScreenEntities.swift */; };
+		F1A107DD28ED774E005E744E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107DC28ED774D005E744E /* BaseViewModel.swift */; };
+		F1A107DF28ED776F005E744E /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107DE28ED776F005E744E /* BaseModel.swift */; };
+		F1A107E128ED7804005E744E /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107E028ED7804005E744E /* BaseRouter.swift */; };
+		F1A107E328ED7E6C005E744E /* BaseEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107E228ED7E6C005E744E /* BaseEntities.swift */; };
 		F1A107E528ED8BCD005E744E /* HomeScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107E428ED8BCD005E744E /* HomeScreenBuilder.swift */; };
 		F1A107E728EDA14F005E744E /* FlightsAndHotelsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A107E628EDA14F005E744E /* FlightsAndHotelsBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F130A91C28F496710075332A /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 		F13603D428E4969600F7C1B3 /* travel-guide-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "travel-guide-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13603D728E4969600F7C1B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F13603DB28E4969600F7C1B3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -42,12 +44,12 @@
 		F14F33D028F19040001E009D /* SearchScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenBuilder.swift; sourceTree = "<group>"; };
 		F1980CC328E646F800FB1CD8 /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCell.swift; sourceTree = "<group>"; };
 		F1980CE728E83A3400FB1CD8 /* FlightsAndHotels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsAndHotels.swift; sourceTree = "<group>"; };
-		F1980CE928E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsAndHotelsCell.swift; sourceTree = "<group>"; };
+		F1980CE928E8D0A700FB1CD8 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		F1980D5128EC693000FB1CD8 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
-		F1A107DC28ED774D005E744E /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
-		F1A107DE28ED776F005E744E /* HomeScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenModel.swift; sourceTree = "<group>"; };
-		F1A107E028ED7804005E744E /* HomeScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenRouter.swift; sourceTree = "<group>"; };
-		F1A107E228ED7E6C005E744E /* HomeScreenEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenEntities.swift; sourceTree = "<group>"; };
+		F1A107DC28ED774D005E744E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		F1A107DE28ED776F005E744E /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		F1A107E028ED7804005E744E /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		F1A107E228ED7E6C005E744E /* BaseEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntities.swift; sourceTree = "<group>"; };
 		F1A107E428ED8BCD005E744E /* HomeScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenBuilder.swift; sourceTree = "<group>"; };
 		F1A107E628EDA14F005E744E /* FlightsAndHotelsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsAndHotelsBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,30 +68,10 @@
 		F11A1C7828F11424000C2448 /* HomeScreen-Module */ = {
 			isa = PBXGroup;
 			children = (
-				F1A107E428ED8BCD005E744E /* HomeScreenBuilder.swift */,
-				F1A107E028ED7804005E744E /* HomeScreenRouter.swift */,
+				F130A91F28F498000075332A /* Builder */,
 				F11A1C7B28F1143E000C2448 /* View */,
-				F11A1C7A28F11438000C2448 /* Model */,
-				F11A1C7928F11430000C2448 /* ViewModel */,
 			);
 			path = "HomeScreen-Module";
-			sourceTree = "<group>";
-		};
-		F11A1C7928F11430000C2448 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F1A107DC28ED774D005E744E /* HomeScreenViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F11A1C7A28F11438000C2448 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F1A107DE28ED776F005E744E /* HomeScreenModel.swift */,
-				F1A107E228ED7E6C005E744E /* HomeScreenEntities.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		F11A1C7B28F1143E000C2448 /* View */ = {
@@ -104,8 +86,8 @@
 		F130A8B928F327430075332A /* SearchScreen-Module */ = {
 			isa = PBXGroup;
 			children = (
-				F13603F028E498A500F7C1B3 /* SearchScreen.swift */,
-				F14F33D028F19040001E009D /* SearchScreenBuilder.swift */,
+				F130A92128F4981A0075332A /* Builder */,
+				F130A92028F498150075332A /* View */,
 			);
 			path = "SearchScreen-Module";
 			sourceTree = "<group>";
@@ -113,11 +95,159 @@
 		F130A8BA28F327FB0075332A /* FlightsAndHotels-Module */ = {
 			isa = PBXGroup;
 			children = (
-				F1980CE728E83A3400FB1CD8 /* FlightsAndHotels.swift */,
-				F1980CE928E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift */,
-				F1A107E628EDA14F005E744E /* FlightsAndHotelsBuilder.swift */,
+				F130A92328F4982D0075332A /* Builder */,
+				F130A92228F498270075332A /* View */,
 			);
 			path = "FlightsAndHotels-Module";
+			sourceTree = "<group>";
+		};
+		F130A91E28F497DA0075332A /* Base-Module */ = {
+			isa = PBXGroup;
+			children = (
+				F130A92928F498820075332A /* Protocol */,
+				F130A92828F498710075332A /* Router */,
+				F130A92728F498640075332A /* ViewModel */,
+				F130A92628F4985A0075332A /* Entity */,
+				F130A92528F4984F0075332A /* Model */,
+				F130A92428F4983D0075332A /* View */,
+			);
+			path = "Base-Module";
+			sourceTree = "<group>";
+		};
+		F130A91F28F498000075332A /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				F1A107E428ED8BCD005E744E /* HomeScreenBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		F130A92028F498150075332A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F13603F028E498A500F7C1B3 /* SearchScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F130A92128F4981A0075332A /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				F14F33D028F19040001E009D /* SearchScreenBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		F130A92228F498270075332A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1980CE728E83A3400FB1CD8 /* FlightsAndHotels.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F130A92328F4982D0075332A /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				F1A107E628EDA14F005E744E /* FlightsAndHotelsBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		F130A92428F4983D0075332A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1980CE928E8D0A700FB1CD8 /* BaseTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F130A92528F4984F0075332A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1A107DE28ED776F005E744E /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F130A92628F4985A0075332A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				F1A107E228ED7E6C005E744E /* BaseEntities.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F130A92728F498640075332A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F1A107DC28ED774D005E744E /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F130A92828F498710075332A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F1A107E028ED7804005E744E /* BaseRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F130A92928F498820075332A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F130A91C28F496710075332A /* BaseProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F130A92A28F498AA0075332A /* DetailScreen-Module */ = {
+			isa = PBXGroup;
+			children = (
+				F130A92B28F498C20075332A /* View */,
+			);
+			path = "DetailScreen-Module";
+			sourceTree = "<group>";
+		};
+		F130A92B28F498C20075332A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1980D5128EC693000FB1CD8 /* DetailScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F130A92C28F498D50075332A /* BookMarksScreen-Module */ = {
+			isa = PBXGroup;
+			children = (
+				F130A92D28F498E70075332A /* View */,
+			);
+			path = "BookMarksScreen-Module";
+			sourceTree = "<group>";
+		};
+		F130A92D28F498E70075332A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F13603F228E498B600F7C1B3 /* BookMarksScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F130A92E28F498F10075332A /* TabBar-Module */ = {
+			isa = PBXGroup;
+			children = (
+				F130A92F28F499020075332A /* View */,
+			);
+			path = "TabBar-Module";
+			sourceTree = "<group>";
+		};
+		F130A92F28F499020075332A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F13603DB28E4969600F7C1B3 /* TabBar.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F13603CB28E4969600F7C1B3 = {
@@ -144,12 +274,13 @@
 				F13603E528E4969700F7C1B3 /* LaunchScreen.storyboard */,
 				F13603E828E4969700F7C1B3 /* Info.plist */,
 				F13603E028E4969600F7C1B3 /* travel_guide_app.xcdatamodeld */,
-				F13603DB28E4969600F7C1B3 /* TabBar.swift */,
-				F13603F228E498B600F7C1B3 /* BookMarksScreen.swift */,
-				F1980D5128EC693000FB1CD8 /* DetailScreen.swift */,
-				F130A8BA28F327FB0075332A /* FlightsAndHotels-Module */,
-				F130A8B928F327430075332A /* SearchScreen-Module */,
+				F130A91E28F497DA0075332A /* Base-Module */,
+				F130A92E28F498F10075332A /* TabBar-Module */,
 				F11A1C7828F11424000C2448 /* HomeScreen-Module */,
+				F130A8B928F327430075332A /* SearchScreen-Module */,
+				F130A92C28F498D50075332A /* BookMarksScreen-Module */,
+				F130A8BA28F327FB0075332A /* FlightsAndHotels-Module */,
+				F130A92A28F498AA0075332A /* DetailScreen-Module */,
 			);
 			path = "travel-guide-app";
 			sourceTree = "<group>";
@@ -224,16 +355,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F130A91D28F496710075332A /* BaseProtocol.swift in Sources */,
 				F1A107E528ED8BCD005E744E /* HomeScreenBuilder.swift in Sources */,
-				F1A107DD28ED774E005E744E /* HomeScreenViewModel.swift in Sources */,
+				F1A107DD28ED774E005E744E /* BaseViewModel.swift in Sources */,
 				F1A107E728EDA14F005E744E /* FlightsAndHotelsBuilder.swift in Sources */,
 				F1980D5228EC693000FB1CD8 /* DetailScreen.swift in Sources */,
-				F1A107DF28ED776F005E744E /* HomeScreenModel.swift in Sources */,
+				F1A107DF28ED776F005E744E /* BaseModel.swift in Sources */,
 				F13603EF28E4989200F7C1B3 /* HomeScreen.swift in Sources */,
-				F1980CEA28E8D0A700FB1CD8 /* FlightsAndHotelsCell.swift in Sources */,
-				F1A107E328ED7E6C005E744E /* HomeScreenEntities.swift in Sources */,
+				F1980CEA28E8D0A700FB1CD8 /* BaseTableViewCell.swift in Sources */,
+				F1A107E328ED7E6C005E744E /* BaseEntities.swift in Sources */,
 				F13603F128E498A500F7C1B3 /* SearchScreen.swift in Sources */,
-				F1A107E128ED7804005E744E /* HomeScreenRouter.swift in Sources */,
+				F1A107E128ED7804005E744E /* BaseRouter.swift in Sources */,
 				F13603E228E4969600F7C1B3 /* travel_guide_app.xcdatamodeld in Sources */,
 				F13603DC28E4969600F7C1B3 /* TabBar.swift in Sources */,
 				F14F33D128F19040001E009D /* SearchScreenBuilder.swift in Sources */,

@@ -8,9 +8,9 @@
 import UIKit
 import CoreData
 
-class BookMarksScreen: UIViewController, HomeScreenViewProtocol {
+class BookMarksScreen: UIViewController, BaseProtocol {
     
-    var viewModel: HomeScreenViewModel?
+    var viewModel: BaseViewModel?
     
     let bookMarkLabel = UILabel()
     
@@ -62,7 +62,7 @@ class BookMarksScreen: UIViewController, HomeScreenViewProtocol {
     }
     
     func showError(with message: String?) {
-        
+        print("error")
     }
     
     func setupUI(){
@@ -76,7 +76,7 @@ class BookMarksScreen: UIViewController, HomeScreenViewProtocol {
         
         tableView = UITableView(frame: CGRect.zero)
         tableView.separatorColor = .systemBackground
-        tableView.register(FlightsAndHotelsCell.self, forCellReuseIdentifier: "flightsandhotelscell")
+        tableView.register(BaseTableViewCell.self, forCellReuseIdentifier: "BaseTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
         view.addSubview(tableView)
@@ -144,7 +144,7 @@ extension BookMarksScreen: UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "flightsandhotelscell",for: indexPath) as! FlightsAndHotelsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BaseTableViewCell",for: indexPath) as! BaseTableViewCell
         cell.name.text = titleArray[indexPath.row]
         cell.desc.text = descriptionArray[indexPath.row]
         let data = imageArray[indexPath.row]

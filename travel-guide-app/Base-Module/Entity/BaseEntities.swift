@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HomeDataTableCellModel {
+struct BaseDataTableCell {
     let imageUrl: String
     let title: String
     let category: String
@@ -15,7 +15,7 @@ struct HomeDataTableCellModel {
 }
 
 
-struct HomeData: Decodable {
+struct BaseData: Decodable {
     let title, homeDataDescription, category, country: String?
     let city: String?
     let images: [Image]?

@@ -7,11 +7,11 @@
 
 import Foundation
 
-class HomeScreenModel {
+class BaseModel {
     
-    weak var viewModel: HomeScreenViewModel?
+    weak var viewModel: BaseViewModel?
     
-    var dataHome: [HomeData] = []
+    var dataHome: [BaseData] = []
     
     func fetchHomeData() {
         guard let url = URL.init(string: "https://633f7631e44b83bc73bab811.mockapi.io/all_travel_list") else {
@@ -47,7 +47,7 @@ class HomeScreenModel {
             
             do {
                 let jsonDecoder = JSONDecoder()
-                self.dataHome = try jsonDecoder.decode([HomeData].self, from: data)
+                self.dataHome = try jsonDecoder.decode([BaseData].self, from: data)
                 self.viewModel?.didDataFetch()
             } catch {
                 self.viewModel?.didDataNotFetch()

@@ -7,13 +7,15 @@
 
 import UIKit
 
-class FlightsAndHotelsCell: UITableViewCell {
+class BaseTableViewCell: UITableViewCell {
     
     let name = UILabel()
     
     let image = UIImageView()
  
     let desc = UILabel()
+    
+    let darkView = UIView()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,6 +24,7 @@ class FlightsAndHotelsCell: UITableViewCell {
         //if we add something first, it will be placed behind the others.
         //for example if I add image last, name and desc will not be seen.
         contentView.addSubview(image)
+        contentView.addSubview(darkView)
         contentView.addSubview(name)
         contentView.addSubview(desc)
         
@@ -32,15 +35,21 @@ class FlightsAndHotelsCell: UITableViewCell {
     
     func setupConstraints(){
         
+        darkView.bounds = image.bounds
+        
         image.topAnchor.constraint(equalTo: contentView.topAnchor,constant: contentView.bounds.width * 0.05).isActive = true
         image.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: contentView.bounds.width * 0.05).isActive = true
         image.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -contentView.bounds.width * 0.05).isActive = true
         image.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -contentView.bounds.width * 0.05).isActive = true
         
+        darkView.topAnchor.constraint(equalTo: contentView.topAnchor,constant: contentView.bounds.width * 0.05).isActive = true
+        darkView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: contentView.bounds.width * 0.05).isActive = true
+        darkView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -contentView.bounds.width * 0.05).isActive = true
+        darkView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,constant: -contentView.bounds.width * 0.05).isActive = true
+        
         name.topAnchor.constraint(equalTo: image.topAnchor,constant: contentView.bounds.width * 0.15).isActive = true
         name.leadingAnchor.constraint(equalTo: image.leadingAnchor,constant: contentView.bounds.width * 0.05).isActive = true
         name.trailingAnchor.constraint(equalTo: image.trailingAnchor,constant: -contentView.bounds.width * 0.05).isActive = true
-        
         
         desc.topAnchor.constraint(equalTo: name.bottomAnchor,constant: contentView.bounds.width * 0.005).isActive = true
         desc.leadingAnchor.constraint(equalTo: image.leadingAnchor,constant: contentView.bounds.width * 0.05).isActive = true
@@ -50,6 +59,12 @@ class FlightsAndHotelsCell: UITableViewCell {
     }
     
     func setupUI(){
+        
+        //darkview config(to be able to see the white text labels)
+        
+        darkView.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        darkView.layer.cornerRadius = 5
+        darkView.translatesAutoresizingMaskIntoConstraints = false
         
         //image config
         

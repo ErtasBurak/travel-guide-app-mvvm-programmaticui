@@ -7,13 +7,13 @@
 
 import UIKit
 
-class HomeScreenRouter {
+class BaseRouter {
     
     weak var viewController: UIViewController?
     
     
     
-    func navigateToDetail(_ data: HomeData) {
+    func navigateToDetail(_ data: BaseData) {
         
         let vc = DetailScreen()
         viewController?.navigationController?.pushViewController(vc, animated: true)

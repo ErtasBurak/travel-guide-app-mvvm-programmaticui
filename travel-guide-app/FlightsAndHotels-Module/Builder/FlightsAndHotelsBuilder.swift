@@ -12,9 +12,9 @@ struct FlightsAndHotelsBuilder {
     static func createFlightsAndHotelsScreen() -> UIViewController {
         
         let vc = FlightsAndHotels()
-        let viewModel = HomeScreenViewModel()
-        let model = HomeScreenModel()
-        let router = HomeScreenRouter()
+        let viewModel = BaseViewModel()
+        let model = BaseModel()
+        let router = BaseRouter()
         
         router.viewController = vc
         viewModel.view = vc

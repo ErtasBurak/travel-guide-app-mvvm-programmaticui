@@ -2,11 +2,21 @@
 
 
 <p align="center">
+  <a href="https://www.apple.com"><img alt="Platform" src="https://img.shields.io/badge/platform-iOS-lightgrey"/></a>
+  <a href="https://developer.apple.com/documentation/xcode-release-notes/xcode-13-release-notes"><img alt="Xcode" src="https://img.shields.io/badge/Xcode-13-blue"/></a>
+  <a href="https://www.swift.org"><img alt="Swift" src="https://img.shields.io/badge/Swift-5-orange"/></a>
+  <a href="https://github.com/ErtasBurak/travel-guide-app-mvvm/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blueviolet"/></a>
+</p>
+
+
+
+
+<p align="center">
 A travel guide app that implements <b>MVVM</b> design pattern, using 
   <a href="https://633f7631e44b83bc73bab811.mockapi.io/all_travel_list">mock API</a>.
 </p>
 
-
+![Ekran Resmi 2022-10-11 02 30 44](https://user-images.githubusercontent.com/88059407/194967213-7a98f7d9-1d14-4af1-b6d2-c89f7e9f30e4.png)
 
 ## ✨ Features
 ### 🔸 Project Features

@@ -75,6 +75,7 @@ class FlightsAndHotels: UIViewController, HomeScreenViewProtocol {
         navigationController?.navigationBar.standardAppearance = fancyAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = fancyAppearance
         navigationController?.navigationBar.compactScrollEdgeAppearance = fancyAppearance
+        navigationController?.navigationBar.compactAppearance = fancyAppearance
         
         
         tableView = UITableView(frame: CGRect.zero)

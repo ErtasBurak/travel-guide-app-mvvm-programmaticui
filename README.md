@@ -26,6 +26,7 @@ A travel guide app that implements <b>MVVM</b> design pattern, using
 - API call with [URLSession](https://developer.apple.com/documentation/foundation/urlsession)
 - Implemented [Core Data](https://developer.apple.com/documentation/coredata)
 - Programmatic UI
+- None 3rd party libraries
 
 ### 🔹 App Features
 - Home Screen shows through various categories and navigates to Flights&Hotels Screen

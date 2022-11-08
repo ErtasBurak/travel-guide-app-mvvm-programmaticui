@@ -68,7 +68,7 @@ A travel guide app that implements <b>MVVM</b> design pattern, using
 
 
 ### 📌 Note
-This Project is not %100 solid. There are some issues; in search screen, when we empty the searchtext it will not refresh the tableview, collectionview and tableviews can crash when we scroll fast. I'm still learning about iOS development. I will update the project as I learn more and find solutions. I'm also open to any kind of advice to make the project's code quality better.
+This Project is not %100 solid. I'm still learning about iOS development. I will update the project as I learn more and find solutions. I'm also open to any kind of advice to make the project's code quality better.
 
 
 ## 📜 License

@@ -60,9 +60,15 @@ class DetailScreen: UIViewController {
         
         category.text = dataCategory
         
-        let url: URL? = URL(string: dataImage ?? "")
-        let data: Data? = try? Data(contentsOf : url!)
-        detailImage.image = UIImage(data : data!)
+        if let url: URL = URL(string: dataImage ?? "") {
+            DispatchQueue.global().async {
+                if let data: Data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        self.detailImage.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
         
         desc.text = dataDescription
         

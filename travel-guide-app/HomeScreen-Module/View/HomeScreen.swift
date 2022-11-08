@@ -226,10 +226,17 @@ private extension HomeScreenCell {
     func configureUI(with model: BaseDataTableCell?) {
         name.text = model?.title
         category.text = model?.category
+  
+        if let url:URL = URL(string: model!.imageUrl) {
+            DispatchQueue.global().async {
+                if let data: Data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        self.image.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
         
-        let url:URL? = URL(string: model!.imageUrl)
-        let data:Data? = try! Data(contentsOf : url!)
-        image.image = UIImage(data : data!)
     
     }
 }

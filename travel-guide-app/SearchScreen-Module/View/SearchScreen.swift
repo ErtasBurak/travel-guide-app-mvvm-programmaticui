@@ -98,10 +98,23 @@ class SearchScreen: UIViewController, BaseProtocol {
 extension SearchScreen: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching == true {
-            return filteredData.count
+            if filteredData.isEmpty {
+                searchTableView.setEmptyMessage("No data for this searchword!")
+                return filteredData.count
+            }else{
+                searchTableView.restore()
+                return filteredData.count
+            }
+           
         } else{
+            if searchTableView.visibleCells.isEmpty {
+                searchTableView.setEmptyMessage("No data for this searchword!")
+            }else{
+                searchTableView.restore()
+            }
             return viewModel?.numberOfItems() ?? 0
         }
+        
         
         
     }
@@ -112,9 +125,16 @@ extension SearchScreen: UITableViewDelegate,UITableViewDataSource{
         if searching == true {
             cell.name.text = filteredData[indexPath.row].title
             cell.desc.text = filteredData[indexPath.row].description
-            let url: URL? = URL(string: filteredData[indexPath.row].imageUrl)
-            let data: Data? = try? Data(contentsOf : url!)
-            cell.image.image = UIImage(data : data!)
+            
+            if let url: URL = URL(string: filteredData[indexPath.row].imageUrl) {
+                DispatchQueue.global().async {
+                    if let data: Data = try? Data(contentsOf: url) {
+                        DispatchQueue.main.async {
+                            cell.image.image = UIImage(data: data)
+                        }
+                    }
+                }
+            }
             cell.selectionStyle = .none
             return cell
             
@@ -163,25 +183,30 @@ private extension BaseTableViewCell {
         name.text = model?.title
         desc.text = model?.description
         
-        let url: URL? = URL(string: model?.imageUrl ?? "")
-        let data: Data? = try? Data(contentsOf : url!)
-        image.image = UIImage(data : data!)
+        
+        if let url: URL = URL(string: model?.imageUrl ?? "") {
+            DispatchQueue.global().async {
+                if let data: Data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        self.image.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        
     }
 }
 
 
 extension SearchScreen: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard !searchText.isEmpty else {
+        if searchText == ""{
             filteredData = viewModel!.uiModel
-            return
-            
+        }else{
+            filteredData = viewModel!.uiModel.filter ({ data_ -> Bool in
+                data_.title.contains(searchText)
+                })
         }
-        
-        filteredData = viewModel!.uiModel.filter ({ data_ -> Bool in
-            data_.title.contains(searchText)
-            })
-        
         
         searchTableView.reloadData()
         
@@ -193,6 +218,36 @@ extension SearchScreen: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searching = true
+    }
+    
+}
+
+extension UITableView {
+
+    func setEmptyMessage(_ message: String) {
+        
+        let uiView = UIView(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+  
+        let image = UIImage(systemName: "xmark.bin.fill")
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRect(x: uiView.bounds.size.width * 0.2, y: uiView.bounds.size.height * 0.1, width: uiView.bounds.size.width * 0.6, height: uiView.bounds.size.height * 0.5)
+        
+        let messageLabel = UILabel(frame: CGRect(x: uiView.bounds.size.width * 0.2, y: uiView.bounds.size.height * 0.6, width: uiView.bounds.size.width * 0.6, height: uiView.bounds.size.height * 0.1))
+        messageLabel.text = message
+        messageLabel.textColor = .blue
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        
+        uiView.addSubview(imageView)
+        uiView.addSubview(messageLabel)
+
+        self.backgroundView = uiView
+        
+    }
+
+    func restore() {
+        self.backgroundView = nil
+        
     }
     
 }

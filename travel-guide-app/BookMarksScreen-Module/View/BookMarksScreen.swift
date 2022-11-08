@@ -140,6 +140,11 @@ class BookMarksScreen: UIViewController, BaseProtocol {
 extension BookMarksScreen: UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if titleArray.isEmpty {
+            tableView.setEmptyMessage("Empty Bookmark. Please add a guide!")
+        }else{
+            tableView.restore()
+        }
         return titleArray.count
     }
     
